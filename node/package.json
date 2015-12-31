@@ -1,0 +1,17 @@
+{
+  "name": "oms_webserver",
+  "version": "1.0.0",
+  "description": "A webserver to connect to a Ruby on Rails backend to implement an Order Management System",
+  "main": "app.js",
+  "dependencies": {
+    "body-parser": "^1.14.2",
+    "express": "^4.13.3",
+    "request": "^2.67.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Yashal Shakti",
+  "license": "MIT"
+}

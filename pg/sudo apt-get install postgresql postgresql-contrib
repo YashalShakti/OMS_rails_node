@@ -1,0 +1,5 @@
+sudo apt-get install postgresql postgresql-contrib libpq-dev
+sudo -u postgres createuser -s pguser
+#sudo -u postgres psql
+#\password pguser
+

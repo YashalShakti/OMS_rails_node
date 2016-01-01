@@ -13,7 +13,7 @@ router.get('/new', function(req, res, next) {
 
 router.post('/new', function(req,res,next){
   	if (!req.body) return res.sendStatus(400);
-	create.order(res,req.body.order.amount,req.body.order.customer_id);
+	create.order(res,req.body.order.amount,req.body.order.customer_id,req.body.order.order_id);
     update.coupon(req.body.order.customer_id,req.body.coupon.coupon_status);
 });
 

@@ -1,9 +1,9 @@
-var express = require('express');
+var express = require('express'),cors = require('cors');
 var app = express();
-
 var customer = require('./routes/customer');
 var order = require('./routes/order');
 
+app.use(cors());
 //Use static files
 app.use('/static',express.static('/public'));
 app.use('/customer', customer);

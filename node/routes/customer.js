@@ -17,6 +17,8 @@ router.get('/update', function(req, res, next) {
 
 router.post('/signup', function(req,res,next){
   	if (!req.body) return res.sendStatus(400);
+  	console.log("Got a POST request for /customer/signup");
+	console.log(req.body);
 	create.customer(res,req.body.customer.customer_name,req.body.customer.email);
 });
 

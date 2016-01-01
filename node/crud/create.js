@@ -1,6 +1,6 @@
 var request = require('request');
 
-
+//Returns id,customer_id and status
 exports.coupon = function (api_response,status,customer_id){
 		var json = { "status":status , "customer_id":customer_id};
 		var serv = "http://localhost:3000/coupons"
@@ -30,8 +30,8 @@ exports.customer = function (api_response,name,email){
 		});
 };
 
-exports.order = function (api_response,amount,customer_id){
-		var json = { "amount":amount , "customer_id":customer_id};
+exports.order = function (api_response,amount,customer_id,order_id){
+		var json = { "amount":amount , "customer_id":customer_id, "orderID":order_id};
 		var serv = "http://localhost:3000/orders"
 		request({
 		    url: serv,
@@ -40,7 +40,7 @@ exports.order = function (api_response,amount,customer_id){
 		    body: json
 		}, function (error, response, body){
 		     console.log("Created Buy record #"+response.body.id);
-	  	     api_response.send("Created Buy record #"+response.body.id);
+	  	     api_response.send(response.body);
 		});
 };
 
